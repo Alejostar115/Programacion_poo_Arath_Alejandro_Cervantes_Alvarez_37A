@@ -3,6 +3,7 @@
 using namespace std;
 
 //Arath Alejandro Cervantes Alvarez 37A ISC
+// programa modela diferentes tipos de deportes usando herencia y polimorfismo
 
 
 class Deporte {
@@ -19,7 +20,7 @@ class Deporte {
 			virtual void mostrarInfo() {
 				cout << "Nombre del deporte: " << nombre << endl;
 				cout << "Numero de jugadores: " << numeroJugadores << endl;
-				cout << "Tipo de balón: " << tipoBalon << endl;
+				cout << "Tipo de balÃ³n: " << tipoBalon << endl;
 				cout << "Lugar de juego: " << lugarDeJuego << endl;
 			}
 };
@@ -48,15 +49,15 @@ class DeporteConPies: public Deporte {
 			
 			void mostrarInfo() override {
 				Deporte::mostrarInfo();
-				cout << "¿Se permiten las manos?: " << (sePermiteManos? "Sí" : "No") << endl;
+				cout << "Â¿Se permiten las manos?: " << (sePermiteManos? "SÃ­" : "No") << endl;
 			}
 };
 
 int main() {
 	DeporteConManos
-	basquet("Baloncesto", 5, "Balón de baloncesto", "Cancha", "Lanzar y botar");
+	basquet("Baloncesto", 5, "BalÃ³n de baloncesto", "Cancha", "Lanzar y botar");
 	DeporteConPies
-	futbol("Fútbol", 11, "Balón de fútbol", "Campo", false);
+	futbol("FÃºtbol", 11, "BalÃ³n de fÃºtbol", "Campo", false);
 	
 	cout << "--- Deporte con manos ---" << endl;
 	basquet.mostrarInfo();

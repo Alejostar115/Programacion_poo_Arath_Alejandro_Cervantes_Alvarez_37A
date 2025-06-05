@@ -4,6 +4,7 @@
 using namespace std;
 
 //Arath Alejandro Cervantes Alvarez 37A ISC
+//programa implementa un autómata finito determinista AFD que evalúa si una cadena de entrada es aceptada o no según un conjunto de reglas de transición definidas
 
 
 enum State { S1, S2, S3, S4 };
@@ -51,7 +52,7 @@ int main() {
         char ch = input[i];
         State next = transition(current, ch);
         if (next == -1) {
-            cout << "Error: No hay transici�n desde " << getStateName(current)
+            cout << "Error: No hay transición desde " << getStateName(current)
                  << " con entrada '" << ch << "'" << endl;
             cout << "Cadena NO aceptada." << endl;
             return 0;

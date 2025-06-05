@@ -1,10 +1,11 @@
 #include <iostream>
-#include <cmath> // Para la funciÛn pow()
+#include <cmath> // Para la funci√≥n pow()
 #include <iomanip> // Para formatear la salida
 
 using namespace std;
 
 //Arath Alejandro Cervantes Alvarez 37A ISC
+// programa calcula el valor futuro de una inversi√≥n con aportaciones mensuales constantes y un inter√©s compuesto, utilizando dos m√©todos diferentes para validar el resultado
 
 
 int main() {
@@ -15,14 +16,14 @@ int main() {
     
     double valor_futuro = 0.0;
     
-    // MÈtodo 1: Usando la fÛrmula matem·tica directa
+    // M√©todo 1: Usando la f√≥rmula matem√°tica directa
     valor_futuro = deposito_mensual * ( (pow(1 + tasa_interes_mensual, meses) - 1) / tasa_interes_mensual );
     
     cout << fixed << setprecision(2); // Formato para mostrar 2 decimales
     cout << "Metodo 1 (Formula directa):" << endl;
-    cout << "Despues de " << anios << " aÒos, tendr·s ahorrado: $" << valor_futuro << endl;
+    cout << "Despues de " << anios << " a√±os, tendr√°s ahorrado: $" << valor_futuro << endl;
     
-    // MÈtodo 2: Calculando mes por mes (simulaciÛn)
+    // M√©todo 2: Calculando mes por mes (simulaci√≥n)
     double ahorro = 0.0;
     for (int mes = 1; mes <= meses; ++mes) {
         ahorro += deposito_mensual;
@@ -30,7 +31,7 @@ int main() {
     }
     
     cout << "\nMetodo 2 (Simulacion mes a mes):" << endl;
-    cout << "Despues de " << anios << " aÒos, tendr·s ahorrado: $" << ahorro << endl;
+    cout << "Despues de " << anios << " a√±os, tendr√°s ahorrado: $" << ahorro << endl;
     
     return 0;
 }

@@ -5,6 +5,7 @@
 using namespace std;
 
 //Arath Alejandro Cervantes Alvarez 37A ISC
+//programa permite al usuario ingresar 10 valores numéricos, los almacena en un vector, los ordena de menor a mayor
 
 int main() {
     vector<double> numeros;
